@@ -10,15 +10,15 @@ function countDown(start) {
   console.log(start);
   let nextNumber = start - 1;
   if (nextNumber > 0) {
-    countDown(nextNumber);
+    setTimeout(countDown, 1000, nextNumber);
   } else {
-    console.log("HaPpY NeW YeaRs")
+    setTimeout(function(){console.log("HaPpY NeW YeaRs");},1000, nextNumber);
   }
 }
 
+var count = parseInt(prompt("How many seconds before the ball drops, bro?"))
 
-
-countDown(10)
+countDown(count);
     </script>
   </body>
 </html>
